@@ -554,7 +554,7 @@ def grup1(urls):
 			lah()
 #-------------[ CRACK-FROM-FILE ]------------------#
 def crack_file():
-	try:vin = os.listdir('/sdcard/KUMIS-DUMP')
+	try:vin = os.listdir('KUMIS-DUMP')
 	except FileNotFoundError:
 		print(' ╰──File Tidak Ditemukan ')
 		time.sleep(2)
@@ -580,7 +580,7 @@ def crack_file():
 		cih = 0
 		lol = {}
 		for isi in vin:
-			try:hem = open('/sdcard/KUMIS-DUMP/'+isi,'r').readlines()
+			try:hem = open('KUMIS-DUMP/'+isi,'r').readlines()
 			except:continue
 			cih+=1
 			if cih<100:
@@ -599,7 +599,7 @@ def crack_file():
 			print(f' ╰──{k}Pilih Yang Bener Kontol {x}')
 			time.sleep(3)
 			back()
-		try:lin = open('/sdcard/KUMIS-DUMP/'+geh,'r').read().splitlines()
+		try:lin = open('KUMIS-DUMP/'+geh,'r').read().splitlines()
 		except:
 			print(' ╰──File Tidak Ditemukan, Coba Lagi Nanti ')
 			time.sleep(2)
@@ -1136,7 +1136,7 @@ if __name__=='__main__':
 	except:pass
 	try:os.mkdir('CP')
 	except:pass
-	try:os.mkdir('/sdcard/KUMIS-DUMP')
+	try:os.mkdir('KUMIS-DUMP')
 	except:pass
 	try:os.system('touch .prox.txt')
 	except:pass
