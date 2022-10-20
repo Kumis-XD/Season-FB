@@ -179,7 +179,7 @@ def login_lagi334():
 		sol().print(wel2, style='white')
 		print(f'[{k}#{x}] MOHON TUNNGU YAH...')
 		time.sleep(1)
-		os.system('pyhon season.py')
+		os.system('pyhton season.py')
 	except Exception as e:
 		os.system("rm -f .token.txt")
 		os.system("rm -f .cok.txt")
@@ -198,7 +198,9 @@ def menu(my_name,my_id):
 		token = open('.token.txt','r').read()
 		cok = open('.cok.txt','r').read()
 	except IOError:
-		print('[×] Cookies Kadaluarsa ')
+		kl='# COOKIES SUDAH KADALUARSA'
+		lk=mark(kl, style='yellow')
+		sol().print(lk, style='white')
 		time.sleep(5)
 		login_lagi334()
 	os.system('clear')
@@ -210,8 +212,8 @@ def menu(my_name,my_id):
 	ot = mark(to, style='cyan')
 	sol().print(ot, style='white')
 	print('')
-	print(f'[{H}•{N}] Your Idz : '+str(my_id))
-	print(f'[{H}•{N}] Your Ip  : {ip}')
+	print(f'[{H}•{N}] Your Idz : {h}'+str(my_id))
+	print(f'{x}[{H}•{N}] Your Ip  : {k}{ip}')
 	print('')
 	an = f'[01] Crack Publik         [02] Crack Publik/Masal\n[03] Crack Followers      [04] Crack Grup\n[05] Crack File           [06] Hasil Crack\n[00] Keluar'
 	na = nel(an, style='cyan')
@@ -350,14 +352,17 @@ def dump_publik():
 		cok = open('.cok.txt','r').read()
 	except IOError:
 		exit()
+	print(f'{x}')
 	print(f'[{asu}+{x}] Masukkan ID Target')
 	pil = input(' ╰── : ')
+	print(f'{x}')
 	try:
 		koh2 = requests.get('https://graph.facebook.com/v2.0/'+pil+'?fields=friends.limit(5000)&access_token='+tokenku[0],cookies = {'cookies':cok}).json()
 		for pi in koh2['friends']['data']:
 			try:id.append(pi['id']+'|'+pi['name'])
 			except:continue
 		print(f'[{m}•{N}] Total Idz Yang Terkumpul : {h}'+str(len(id)))
+		print(f'{x}')
 		setting()
 	except requests.exceptions.ConnectionError:
 		print(f'{x}')
@@ -621,6 +626,7 @@ def setting():
 	print('')
 	print(f'[{asu}?{x}] pilih')
 	hu = input(' ╰─── : ')
+	print('')
 	if hu in ['1','01']:
 		for tua in sorted(id):
 			id2.append(tua)
@@ -668,7 +674,7 @@ def setting():
 		taplikasi.append('ya')
 	else:
 		taplikasi.append('no')
-	print(f'[{k}?{k}] {x}Tambahkan Password Manual ( Y/t )')
+	print(f'[{k}?{x}] Tambahkan Password Manual ( Y/t )')
 	pwplus=input(' ╰─── : ')
 	print('')
 	if pwplus in ['y','Y']:
