@@ -185,7 +185,7 @@ def login_lagi334():
 		os.system("rm -f .cok.txt")
 		gl='# YAH GAGAL MASUK, JANGAN NAGIS'
 		lg=mark(gl, style='red')
-		sol().print(wel2, style='white')
+		sol().print(lg, style='white')
 		exit()
 def bot():
 	try:
