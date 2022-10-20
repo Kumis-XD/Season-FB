@@ -214,7 +214,7 @@ def menu(my_name,my_id):
 	print('')
 	print(f'[{H}•{N}] Your Idz : {h}'+str(my_id))
 	print(f'{x}[{H}•{N}] Your Ip  : {k}{ip}')
-	print('')
+	print(f'{x}')
 	an = f'[01] Crack Publik         [02] Crack Publik/Masal\n[03] Crack Followers      [04] Crack Grup\n[05] Crack File           [06] Hasil Crack\n[00] Keluar'
 	na = nel(an, style='cyan')
 	cetak(nel(na, title='MENU-CRACK'))
